@@ -76,7 +76,23 @@ class BinarySearchTree {
    * return the node, if found; else undefined. Uses iteration. */
 
   find(val) {
+    let currentNode = this.root;
+    let found = false;
 
+    if (val === currentNode.val) return currentNode;
+
+    while (currentNode & !found) {
+      if (val < currentNode.val) {
+        currentNode = currentNode.left;
+      } else if (val > currentNode.val) {
+        currentNode = currentNode.right;
+      } else {
+        found = true;
+      }
+    }
+
+    if (!found) return undefined;
+    return currentNode;
   }
 
   /** findRecursively(val): search the tree for a node with value val.
