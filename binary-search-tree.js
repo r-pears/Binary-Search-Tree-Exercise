@@ -300,7 +300,7 @@ class BinarySearchTree {
 
     while (current) {
       // current is largest and has a left subtree and 2nd largest is the largest in that subtree
-      if (current.left && !this.current.right) {
+      if (current.left && !current.right) {
         return this.findSecondHighest(current.left);
       }
 
