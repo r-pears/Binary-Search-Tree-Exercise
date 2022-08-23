@@ -81,7 +81,7 @@ class BinarySearchTree {
 
     if (val === currentNode.val) return currentNode;
 
-    while (currentNode & !found) {
+    while (currentNode && !found) {
       if (val < currentNode.val) {
         currentNode = currentNode.left;
       } else if (val > currentNode.val) {
